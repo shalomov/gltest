@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Global Logic</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <!-- main nav -->
+  <div class="container-fluid custom-nav">
+    <div class="container">
+      <div class="wrapp-nav clearfix">
+        <a class="logo-wrapp" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="137" height="82" viewBox="0 0 137 82">
+            <image id="Panda_Logo" data-name="Panda Logo" width="137" height="82" xlink:href="data:img/png;base64,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"/>
+            </svg>
+        </a>
+        <div class="wrapp-switcher">
+          <div class="custom-menu" id="menu-switcher" dir="rtl">
+              <label for="rotate"></label>
+              <input type="checkbox" id="rotate" />
+              <div class="wrapper-menu">
+                <b></b>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <aside class="menu-aside" id="sidbar">
+    <ul class="menu-aside_list">
+      <li class="menu-aside_item">
+        <a href="#" class="menu-aside_link">Market Analysis</a>
+        <ul class="submenu-aside">
+          <li class="submenu-aside_item">
+            <a href="#" class="submenu-aside_link">Market News</a>
+          </li>
+          <li class="submenu-aside_item">
+            <a href="#" class="submenu-aside_link">Economic Calender</a>
+          </li>
+          <li class="submenu-aside_item">
+            <a href="#" class="submenu-aside_link">Strategy Calculator</a>
+          </li>
+        </ul>
+      </li>
+      <li class="menu-aside_item">
+        <a href="#" class="menu-aside_link">Products</a>
+        <ul class="submenu-aside">
+          <li class="submenu-aside_item">
+            <a href="#" class="submenu-aside_link">Forex</a>
+          </li>
+          <li class="submenu-aside_item">
+            <a href="#" class="submenu-aside_link">Shares</a>
+          </li>
+          <li class="submenu-aside_item">
+            <a href="#" class="submenu-aside_link">Indices</a>
+          </li>
+          <li class="submenu-aside_item">
+            <a href="#" class="submenu-aside_link">Comodities</a>
+        </li>
+        </ul>
+      </li>
+      <li class="menu-aside_item">
+        <a href="#" class="menu-aside_link">Education</a>
+        <ul class="submenu-aside">
+          <li class="submenu-aside_item">
+            <a href="#" class="submenu-aside_link">Videos</a>
+          </li>
+          <li class="submenu-aside_item">
+            <a href="#" class="submenu-aside_link">E-books</a>
+          </li>
+          <li class="submenu-aside_item">
+            <a href="#" class="submenu-aside_link">In-depth Courses</a>
+          </li>
+        </ul>
+      </li>
+      <li class="menu-aside_item">
+        <a href="#" class="menu-aside_link">Legal</a>
+        <ul class="submenu-aside">
+          <li class="submenu-aside_item">
+            <a href="#" class="submenu-aside_link">Anti Money Laundring</a>
+          </li>
+          <li class="submenu-aside_item">
+            <a href="#" class="submenu-aside_link">EPrivacy policy</a>
+          </li>
+          <li class="submenu-aside_item">
+            <a href="#" class="submenu-aside_link">Risk Disclosure and Risk Disclaimer Policy</a>
+          </li>
+          <li class="submenu-aside_item">
+            <a href="#" class="submenu-aside_link">Deposit And Withdrawal Policy</a>
+          </li>
+          <li class="submenu-aside_item">
+            <a href="#" class="submenu-aside_link">KYC</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+  <!-- end main nav -->
+
+  <!-- banner -->
+  <div class="wrapp-banner">
+    <div class="container">
+      <div class="banner-desc">
+        <h1 class="banner-title">Over 100 FX and Binary Options brokers choose Panda Trading System as their technology partner</h1>
+        <p class="banner-subtitle">One-on-one consultation meeting with Mr. John Doe,<br> VP of Business Development at Panda Trading Systems</p>
+      </div>
+      <div class="banner-form">
+        <form  data-toggle="validator" role="form" id="form-reg">
+          <fieldset>
+            <legend class="form-title">
+              <span class="form-text_first">OPEN ACCOUNT,</span> 
+              <span class="form-text_second">It’s free!</span>
+            </legend>
+            <div class="form-content">
+              <div class="form-group first-group">
+                <div class="form-inline row">
+                  <div class="col-sm-6 custom-col">
+                    <div class="form-group">
+                      <label for="FirstName" class="control-label">First Name*</label>
+                      <input class="input-custom" name="firstname" type="text" pattern="^[a-zA-Z]{2,}"  id="FirstName" data-error="First Name is required" required>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 custom-col">
+                    <div class="form-group">
+                      <label for="LastName" class="control-label">Last Name*</label>
+                      <input class="input-custom" name="lastname" type="text" pattern="^[a-zA-Z]{2,}"  id="LastName" data-error="Last Name is required" required>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group second-group">
+                <div class="form-inline row">
+                  <div class="col-sm-6 custom-col">
+                    <div class="form-group">
+                      <label for="inputEmail" class="control-label">Email*</label>
+                      <input class="input-custom" name="email" type="email"  id="inputEmail" data-error="Email address is required" required>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 custom-col">
+                    <div class="form-group">
+                      <label for="inputTel" class="control-label">Phone Number*</label>
+                      <input class="input-custom" name="telephone" type="tel" pattern="^[0-9]{6,12}" placeholder="+972" id="inputTel" data-error="Phone number is required" required>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group second-group">
+                <div class="form-inline row">
+                  <div class="form-group col-sm-6 custom-col">
+                    <label for="inputPassword" class="control-label">Password*</label>
+                    <input class="input-custom" name="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[a-zA-Z]).{6,}"  id="inputPassword" data-error="Password is required" required>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                  <div class="form-group col-sm-6 custom-col">
+                    <label for="inputPassword" class="control-label">Password confirmation*</label>
+                    <input class="input-custom" name="confirmPassword" type="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[a-zA-Z]).{6,}" id="inputPasswordConfirm" data-match="#inputPassword" data-error="Confirm is required" required>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group second-group">
+                <div class="checkbox">
+                  <label class="privacy-label">
+                    <input type="checkbox" id="terms">
+                    <span class="privacy-info">We respect your privacy and do not tolerate spam and will never use it for other purposes.</span>
+                  </label>
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-reg">Apply Now</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+        <div class="form-msg" >
+          <h4 class="msg-title">Somthing Went Wrong...</h4>
+          <p class="msg-subtitle">You must currectly fill the fields!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end banner -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+          <a class="logo-wrapp" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="137" height="82" viewBox="0 0 137 82">
+            <image id="Panda_Logo" data-name="Panda Logo" width="137" height="82" xlink:href="data:img/png;base64,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"/>
+            </svg>
+          </a>
+          <ul class="footer-contacts">
+            <li class="contact-livechat"><a href="skype:exampleLiveChat?chat">Live Chat</a></li>
+            <li class="contact-phone"><a href="tel:+000000000000">+00 000 00 00000</a></li>
+            <li class="contact-email"><a href="mailto:support@pandats.com">support@pandats.com</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
+          <ul class="footer-nav">
+            <li>
+              <a href="#" class="menu-aside_link">Market Analysis</a>
+            </li>
+            <li>
+              <a href="#" class="submenu-aside_link">Market News</a>
+            </li>
+            <li>
+              <a href="#" class="submenu-aside_link">Economic Calender</a>
+            </li>
+            <li>
+              <a href="#" class="submenu-aside_link">Strategy Calculator</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
+          <ul class="footer-nav">
+            <li>
+              <a href="#" class="menu-aside_link">Products</a>
+            </li>
+            <li>
+              <a href="#" class="submenu-aside_link">Forex</a>
+            </li>
+            <li>
+              <a href="#" class="submenu-aside_link">Shares</a>
+            </li>
+            <li>
+              <a href="#" class="submenu-aside_link">Indices</a>
+            </li>
+            <li>
+              <a href="#" class="submenu-aside_link">Comodities</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
+          <ul class="footer-nav">
+            <li>
+              <a href="#" class="menu-aside_link">Education</a>
+            </li>
+            <li>
+              <a href="#" class="submenu-aside_link">Videos</a>
+            </li>
+            <li>
+              <a href="#" class="submenu-aside_link">E-books</a>
+            </li>
+            <li>
+              <a href="#" class="submenu-aside_link">In-depth Courses</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+          <ul class="footer-nav">
+            <li>
+              <a href="#" class="menu-aside_link">Legal</a>
+            </li>
+            <li>
+              <a href="#" class="submenu-aside_link">Anti Money Laundring</a>
+            </li>
+            <li>
+              <a href="#" class="submenu-aside_link">EPrivacy policy</a>
+            </li>
+            <li>
+              <a href="#" class="submenu-aside_link">Risk Disclosure and Risk Disclaimer Policy</a>
+            </li>
+            <li>
+              <a href="#" class="submenu-aside_link">Deposit And Withdrawal Policy</a>
+            </li>
+            <li>
+              <a href="#" class="submenu-aside_link">KYC</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="copyright-info_wrapp">
+    <div class="container">
+      <div class="copyright-info">
+        <p >RISK DISCLAIMER: THIS WEBSITE OFFERS HIGHLY SPECULATIVE INVESTMENTS, CARRIES A HIGH LEVEL OF RISK AND MAY NOT BE SUITABLE FOR ALL TRADERS. YOU MAY SUSTAIN A LOSS OF<br> 
+        SOME OR ALL OF YOUR INVESTED CAPITAL; THEREFORE, DO NOT SPECULATE WITH CAPITAL THAT YOU CANNOT AFFORD TO LOSE. <br>
+        WWW.PANDATS.COM IS OWNED BY CF MARKETING GROUP LIMITED <br>
+        COMPANY ADDRESS: TRUST COMPANY COMPLEX, AJELTAKE ROAD, AJELTAKE ISLAND, MAJURO, MARSHALL ISLANDS, MH96960 <br>
+        PHYSICAL ADDRESS: WARWICK STREET 48, LONDON, GREATER LONDON, W1B 5AW, UNITED KINGDOM </p>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/validator.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
